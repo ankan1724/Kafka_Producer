@@ -1,0 +1,23 @@
+server:
+  port: 9999
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.JsonSerializer
+
+kafka:
+  ssl:
+    bootstrap-servers: localhost:9093
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    security-protocol: SSL
+    truststore-location: D:/kafkaSSL/producer-truststore.jks
+    truststore-password: ankan1724
+    key-password: ankan1724
+
+logging:
+  level:
+    org.apache.kafka: INFO
